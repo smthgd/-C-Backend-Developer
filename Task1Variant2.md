@@ -5,16 +5,16 @@
 Данные отсортировать по фамилии и имени сотрудника.  
   
 SELECT  
-    Sellers.Surname,  
-    Sellers.Name,  
-    SUM(Sales.Quantity) AS "Объем продаж"  
+&emsp; Sellers.Surname,  
+&emsp; Sellers.Name,  
+&emsp; SUM(Sales.Quantity) AS "Объем продаж"  
 FROM  
-    Sellers  
+&emsp; Sellers  
 JOIN  
-    Sales ON Sellers.ID = Sales.IDSel  
+&emsp; Sales ON Sellers.ID = Sales.IDSel  
 WHERE  
-    Sales.Date BETWEEN '20131001' AND '20131007'  
+&emsp; Sales.Date BETWEEN '20131001' AND '20131007'  
 GROUP BY  
-    Sellers.Surname, Sellers.Name  
+&emsp; Sellers.Surname, Sellers.Name  
 ORDER BY  
-    Sellers.Surname, Sellers.Name;
+&emsp; Sellers.Surname, Sellers.Name;
